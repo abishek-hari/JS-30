@@ -10,7 +10,7 @@
 <h4>HIGHER ORDER FUNCTIONS</h4>
 <h4>DOCUMENT OBJECT MODEL (DOM)</h4>
 <h1>ADVANCE JAVASCRIPT (ES6)</h1>
-
+<hr>
 <h3>MODULE-2</h3>
 <h4>CALL</h4>
 <h4>APPLY</h4>
@@ -19,10 +19,11 @@
 <h4>HOISTING</h4>
 <h4>DESTRUCTURING</h4>
 <h4>SPREADING</h4>
-
+<hr>
 <h3>MODULE-3</h3>
 <h4>PROMISE</h4>
 <h4>ASYNC/AWAIT</h4>
 <h4>FETCH</h4>
 <h4>AJAX</h4>
 <h4>JSON</h4>
+<hr>
