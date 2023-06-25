@@ -224,3 +224,122 @@ personAccount.addExpense("Rent", 1000);
 personAccount.addExpense("Groceries", 200);
 
 console.log(personAccount.accountInfo());
+
+// USER OBJECT
+
+const user = [
+  {
+    _id: "ab12ex",
+    username: "Alex",
+    email: "alex@alex.com",
+    password: "123123",
+    createdAt: "08/01/2020 9:00 AM",
+    isLoggedIn: false,
+  },
+  {
+    _id: "fg12cy",
+    username: "Asab",
+    email: "asab@asab.com",
+    password: "123456",
+    createdAt: "08/01/2020 9:30 AM",
+    isLoggedIn: true,
+  },
+  {
+    _id: "zwf8md",
+    username: "Brook",
+    email: "brook@brook.com",
+    password: "123111",
+    createdAt: "08/01/2020 9:45 AM",
+    isLoggedIn: true,
+  },
+  {
+    _id: "eefamr",
+    username: "Martha",
+    email: "martha@martha.com",
+    password: "123222",
+    createdAt: "08/01/2020 9:50 AM",
+    isLoggedIn: false,
+  },
+  {
+    _id: "ghderc",
+    username: "Thomas",
+    email: "thomas@thomas.com",
+    password: "123333",
+    createdAt: "08/01/2020 10:00 AM",
+    isLoggedIn: false,
+  },
+];
+
+// Imagine you are getting the above users collection from a MongoDB database. a. Create a function called signUp which allows user to add to the collection. If user exists, inform the user that he has already an account.
+// b. Create a function called signIn which allows user to sign in to the application
+
+function signUp(user) {
+  const existingUser = findUserByEmail();
+}
+
+function findUserByEmail(email) {
+  for (const userId in user) {
+    if (user[userId].email === email) {
+      return user[userId];
+    }
+  }
+}
+
+// function signUp(user) {
+//   // Check if user with the same email already exists
+//   const existingUser = findUserByEmail(user.email);
+//   if (existingUser) {
+//     console.log('User already has an account.');
+//     return;
+//   }
+
+//   // Generate a unique ID for the new user
+//   const id = generateUniqueId();
+
+//   // Add the user to the collection
+//   const newUser = { _id: id, ...user };
+//   users[id] = newUser;
+
+//   console.log('User signed up successfully:', newUser);
+// }
+
+// function signIn(email, password) {
+//   // Find the user with the provided email and password
+//   const user = findUserByEmail(email);
+//   if (user && user.password === password) {
+//     user.isLoggedIn = true;
+//     console.log('User signed in successfully:', user);
+//   } else {
+//     console.log('Invalid email or password.');
+//   }
+// }
+
+// function findUserByEmail(email) {
+//   for (let userId in users) {
+//     if (users[userId].email === email) {
+//       return users[userId];
+//     }
+//   }
+//   return null;
+// }
+
+// function generateUniqueId() {
+//   const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+//   let id = '';
+//   for (let i = 0; i < 6; i++) {
+//     const randomIndex = Math.floor(Math.random() * characters.length);
+//     id += characters.charAt(randomIndex);
+//   }
+//   return id;
+// }
+
+// // Example usage:
+// signUp({
+//   username: 'John',
+//   email: 'john@example.com',
+//   password: 'password123',
+//   createdAt: '08/02/2020 10:15 AM',
+//   isLoggedIn: false
+// });
+
+// signIn('asab@asab.com', '123456');
