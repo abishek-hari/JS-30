@@ -1,6 +1,13 @@
 // EXERCISE LEVEL-1
 
-const countries = ["Finland", "Sweden", "Denmark", "Norway", "IceLand"];
+const countries = [
+  "Finland",
+  "Sweden",
+  "Denmark",
+  "Norway",
+  "IceLand",
+  "Swizerland",
+];
 const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const products = [
@@ -170,21 +177,87 @@ console.log(sumOfPrice);
 
 // Create a function which return an array of objects, which is the letter and the number of times the letter use to start with a name of a country.
 
-const countStartingLetters = () => {
+const countStartingLetters = (country) => {
   let countLetters = {};
-  for (const country of countries) {
-    const firstLetter = country[0].toUpperCase();
+  for (const countries of country) {
+    const firstLetter = countries[0].toUpperCase();
     if (countLetters[firstLetter]) {
       countLetters[firstLetter] += 1;
     } else {
       countLetters[firstLetter] = 1;
     }
   }
+
+  let result = [];
+  for (const letter in countLetters) {
+    result.push({ letter, count: countLetters[letter] });
+  }
+  return result;
 };
-console.log(countStartingLetters());
+
+const country = ["Finland", "Sweden", "Denmark", "Norway", "IceLand"];
+const letterCount = countStartingLetters(country);
+console.log(letterCount);
 
 // Declare a getFirstTenCountries function and return an array of ten countries. Use different functional programming to work on the countries.js array
 
-// Declare a getLastTenCountries function which which returns the last ten countries in the countries array.
+const getFirstTenCountries = (countri) => {
+  return countri.slice(0, 5);
+};
+
+const countri = [
+  "Finland",
+  "Sweden",
+  "Denmark",
+  "Norway",
+  "IceLand",
+  "India",
+  "swizerland",
+  "france",
+  "fiji",
+  "brazil",
+];
+const firstCountry = getFirstTenCountries(countri);
+console.log(firstCountry);
+
+// Declare a getLastTenCountries function which which returns the last ten countries in the countries array
+const getLastTenCountries = (lastCountries) => {
+  const result = lastCountries.slice(-4);
+  return result;
+};
+
+const lastCountries = [
+  "Finland",
+  "Sweden",
+  "Denmark",
+  "Norway",
+  "IceLand",
+  "India",
+  "swizerland",
+  "france",
+  "fiji",
+  "brazil",
+];
+const lastCountry = getLastTenCountries(lastCountries);
+console.log(lastCountry);
 
 // Find out which letter is used many times as initial for a country name from the countries array (eg. Finland, Fiji, France etc)
+
+// Function to find the most frequently used initial letter
+function findMostFrequentInitialLetter() {
+  const initialLetters = countries.map((country) => country[0]);
+  const letterCount = initialLetters.reduce((countMap, letter) => {
+    countMap[letter] = (countMap[letter] || 0) + 1;
+    return countMap;
+  }, {});
+
+  const sortedLetters = Object.keys(letterCount).sort(
+    (a, b) => letterCount[b] - letterCount[a]
+  );
+  return sortedLetters[0];
+}
+
+const mostFrequentInitialLetter = findMostFrequentInitialLetter();
+console.log(mostFrequentInitialLetter);
+
+// EXERCISE LEVEL-3
