@@ -42,7 +42,7 @@ paragraph.forEach((para, i) => {
   }
 });
 
-// DOM DAY 2
+// DOM DAY-2
 
 const title = document.createElement("h1");
 title.className = "title";
@@ -50,3 +50,21 @@ title.style.color = "red";
 title.textContent = "hi there, how are you?";
 console.log(title);
 document.body.appendChild(title);
+
+// DOM DAY-3
+const mass = document.querySelector("#mass");
+const height = document.querySelector("#height");
+const button = document.querySelector("button");
+
+let bmi;
+button.addEventListener("click", () => {
+  bmi = mass.value / height.value ** 2;
+  console.log(bmi);
+});
+
+let para = document.querySelector(".p");
+
+document.body.addEventListener("keypress", (e) => {
+  para.textContent = e.key;
+  console.log(e.key);
+});

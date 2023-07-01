@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate Number</title>
+    <style>
+      .box {
+        width: 80px;
+        height: 80px;
+        border-radius: 0.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 700;
+      }
+      .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        width: 800px;
+        margin: 0 auto;
+        margin-top: 1rem;
+      }
+      .wrapper {
+        width: 95%;
+        margin: 1rem auto;
+      }
+      .wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25rem;
+        margin: 0 auto;
+      }
+      input {
+        width: 100%;
+        padding: 0.8rem 0.2rem;
+        font-size: 1rem;
+        outline: none;
+        border: 2px solid #ff24a5;
+      }
+      button {
+        width: 100%;
+        padding: 0.9rem 0;
+        background-color: #ff24a5;
+        color: #fff;
+        margin-left: 5px;
+        outline: none;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrap">
+        <input type="text" placeholder="Enter Any Number" />
+        <button class="btn" type="submit">Generate Number</button>
+      </div>
+      <div class="boxes"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key-code</title>
+    <style>
+      .boxes {
+        width: 90%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+      .box,
+      .card {
+        width: 450px;
+        height: 100px;
+        background: white;
+        box-shadow: 0.1rem 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 900;
+        color: #888;
+        letter-spacing: 1px;
+      }
+      span {
+        color: rgb(67, 183, 67);
+        font-size: 2rem;
+        font-weight: 900;
+        margin-left: 0.5rem;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxes">
+      <div class="box">You pressed <span class="text"></span></div>
+      <div class="box"><span class="number"></span></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
